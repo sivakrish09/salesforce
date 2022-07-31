@@ -1,0 +1,25 @@
+.quote {
+    margin: 0;
+    background: rgb(231, 224, 224);
+    padding: 1em;
+    border-radius: 1em;
+    font-size: 20px;
+    line-height: 1.4rem;
+    height: 100%;
+    padding: .5rem;
+    margin-right: 150px;
+    margin-left: 80px;
+  }
+p {
+    line-height: 1.4em;
+}
+template{
+    margin-right: 150px;
+    margin-left: 80px;
+}
+.quote--author {
+    font-family: 'Open Sans Condensed';
+    font-size: .8rem;
+    font-weight: 300;
+    margin-left: 80px;
+}
