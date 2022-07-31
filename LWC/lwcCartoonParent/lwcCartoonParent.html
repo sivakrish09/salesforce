@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="EventWithData" icon-name="standard:logging">
+        <template if:true={apexContact.data}>
+            <lightning-layout class="slds-var-m-around_medium">
+                <lightning-layout-item size="1">
+                    <template for:each={apexContact.data} for:item="contact">
+                        <c-lwc-cartoon-child key={contact.Id}
+                                             contact={contact}  onselected={imgselect}>
+                        </c-lwc-cartoon-child>
+                    </template>
+                </lightning-layout-item>
+                
+                <lightning-layout-item  class="slds-var-m-left_medium">
+                    <template if:true={contactselected}>
+                        <img src={contactselected.GIF__c}>
+                    </template>
+                </lightning-layout-item>
+                <lightning-layout-item size="2" flexibility="auto" class="slds-var-m-left_medium">
+                    <template if:true={contactselected}>
+                        <p>{contactselected.Name}</p>
+                        <p>{contactselected.Description}</p>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+    </lightning-card>
+</template>
