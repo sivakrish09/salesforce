@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="75th Independence day of India Contest">
+        <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="around-small">
+                <img src="https://c.tenor.com/d39zhmpSHT4AAAAi/umm.gif">
+                <lightning-combobox
+                    name="progress"
+                    label="Select any Indian State"
+                    value={value}
+                    placeholder="State List"
+                    options={options}
+                    onchange={handleChange} >
+                </lightning-combobox>
+            </lightning-layout-item>
+            <div class="slds-col slds-size_2-of-3">
+                    <lightning-layout-item flexibility="auto" padding="around-small">
+                        <h1>Selected value is: {value}</h1>
+                        <lightning-map
+                            map-markers={mapMarkers}
+                            zoom-level={zoomLevel}>
+                         </lightning-map>
+                    </lightning-layout-item>
+            </div>
+        </lightning-layout>
+    </lightning-card>
+</template>
